@@ -1,0 +1,88 @@
+.formLogin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    align-self: center;
+    flex-direction: column;
+}
+.fidelSet{
+    background-color: white;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem 0 rgba(0,0,0,0.2);
+    margin-bottom: 6rem;
+}
+.inputLogin{
+    width: 16rem;
+    height: 2rem;
+    border: 1px solid rgb(105, 102, 102);
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px rgb(3, 3, 3);
+}
+.labelLogin{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #242424;
+    margin: 10px;
+}
+.mainLogin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 6rem;
+}
+.buttonLogin{
+    width: 16rem;
+    height: 2rem;
+    border: 1px solid rgb(105, 102, 102);
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px rgb(3, 3, 3);
+    background-color: #e441f3;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-top: 1rem;
+}
+.buttonLogin:hover{
+    background-color: #242424;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.5rem;
+    transition: cubic-bezier(0.86, 0, 0.07, 1) 0.3s;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+.pLogin{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #242424;
+    margin: 10px;
+    text-align: center;
+}
+.linkLogin{
+    text-decoration: none;
+    color: #f8029a;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.linkLogin:hover{
+    color: #ffffff;
+    background-color: #f053b4;
+    border-radius: 10px;
+    padding: 5px;
+    transition: cubic-bezier(0.86, 0, 0.07, 1) 0.3s;
+}
+.loginError{
+    color: #ffffff;
+    font-size: 1rem;
+    font-family: 'Titillium Web', sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    margin-top: 1rem;
+}

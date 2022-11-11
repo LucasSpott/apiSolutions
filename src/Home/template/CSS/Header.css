@@ -1,0 +1,207 @@
+.txt-Header{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+}
+.txt-Header:active{
+    color: #fff;
+}
+.image-Logo{
+    width: 7rem;
+    margin: 0.5rem;
+    display: block;
+}
+header{
+    display: grid;
+    grid-template-columns: 0fr 1fr 2fr 1fr 1fr;
+    grid-template-areas: "logo menu menu";
+    background-color: rgb(31, 30, 30);
+    align-items: center;
+    margin-bottom: 0rem;
+}
+.h1-Header{
+    margin-left: 2rem;
+}
+.h1-Header:hover{
+   transform: scale(1.1);
+    transition: cubic-bezier(0.39, 0.575, 0.565, 1) 0.2s;
+}
+.txt-Header:hover{
+    color:rgb(177, 18, 209);
+    transition: cubic-bezier(0.39, 0.575, 0.565, 1) 0.2s;
+}
+.button-Header{
+    background-color: rgb(177, 18, 209);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.img-Header{
+    display: none;
+}
+nav{
+    grid-area: menu;
+    display: grid;
+    grid-template-columns: repeat(4, 0);
+    align-items: center;
+    justify-content: space-around;
+}
+
+.button-Header:hover{
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    transition: cubic-bezier(0.39, 0.575, 0.565, 1) 0.3s;
+}
+
+/* MENU ANIMATION CSSTRANSITION */
+
+.menuAnimation-enter{
+    opacity: 0;
+    transform: translateY(-100px);
+}
+.menuAnimation-enter-active{
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.3s;
+}
+.menuAnimation-exit{
+    opacity: 1;
+    transform: translateY(-100);
+}
+.menuAnimation-exit-active{
+    opacity: 0;
+    transform: translateY(-100);
+    transition: all 0.3s;
+}
+.menutxt-Header{
+    display: none;
+}
+
+.div-NavButtons{
+    display: none;
+}
+.menuButton-Header{
+    display: none;
+}
+.buttonAnimation-enter{
+    opacity: 0;
+    transform: perspective(1000px) rotateX(90deg);
+}
+.buttonAnimation-enter-active{
+    opacity: 1;
+    transform: perspective(1000px) rotateY(35deg);
+    transition: all 0.3s;
+}
+/* .buttonAnimation-exit{
+    opacity: 1;
+    transform: perspective(500px) rotateX(35deg);
+}
+.buttonAnimation-exit-active{
+    opacity: 0.2;
+    transform: perspective(500px) rotateX(90deg);
+    transition: all 0.3s;
+}
+*/
+
+
+/* MEDIA QUERY */
+
+@media (min-width: 301px) and (max-width: 1199px) {
+    .h1-Header{
+        font-size: 20px;
+    }
+    .txt-Header{
+        font-size: 10px;
+        display: none
+    }
+    .image-Logo{
+        width: 7rem;
+    }
+    .img-Header{
+        width: 3rem;
+        display: flex;
+    }
+    .button-Header{
+        font-size: 13px;
+        padding: 10px;
+        display: none;
+    }
+    header{
+        padding: 0.5rem;
+        z-index: 10;
+        display: grid;
+        grid-template-columns: 1fr 1fr 3fr 1fr;
+        grid-template-areas: "logo menu menu";
+    }
+    .div-Menu{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+    }
+    nav{
+        grid-template-columns: repeat(4, 0);
+        grid-template-rows: none;
+        grid-row-gap: 20px;
+    }
+    .menutxt-Header{
+        font-size: 20px;
+        color: rgb(248, 7, 156);
+        text-decoration: none;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
+    .menu{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-row-gap: 23px;
+        background-color: white;
+        padding:30px 40px;
+        position: absolute;
+        border-radius: 3px;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+        z-index: 1;
+        animation: aninNavMenu 0.3s;
+    }
+    @keyframes aninNavMenu{
+        0%{
+            opacity: 0;
+            transform: translateY(-100px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+        
+    
+    .div-NavMenu{
+        position: absolute;
+        right: 15rem;
+    }
+    .div-NavButtons{
+        display: grid;
+        grid-template-rows: 1fr;
+    }
+    .menuButton-Header{
+        border: none;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        font-size: 20px;
+        cursor: pointer;
+        font-weight: bold;
+        display: flex;
+    }
+}
+
