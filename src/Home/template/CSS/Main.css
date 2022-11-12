@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;1,200;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 .h1-Home{
     font-family: 'Bebas Neue', cursive;
@@ -10,6 +13,9 @@
     margin-bottom: 30px;
     text-decoration: none;
     animation: aninH1HOME 2s ease-in-out;
+}
+main{
+    animation: aninAllMain 2s ease-in-out;
 }
 .div-Span{
     display: block;
@@ -70,6 +76,7 @@
     align-items: center;
     cursor: pointer;
     box-shadow: 3px 3px 1px 1px rgba(0, 0, 0, 0.2);
+    animation: aninBoxMain 8s cubic-bezier(0.95, 0.05, 0.795, 0.035) infinite;
 }
 .txt-mainBox{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -80,9 +87,16 @@
     margin-left: 0.5rem;
     text-align: left;
 }
-.box1:hover{
-    box-shadow: 4px 3px 0px 0px rgb(204, 0, 255);
-    transition: cubic-bezier(0.95, 0.05, 0.795, 0.035) 0.5s;
+@keyframes aninBoxMain {
+    0%{
+        box-shadow: 4px 3px 0px 0px rgb(204, 0, 255);
+    }
+    50%{
+        box-shadow: 3px 3px 1px 1px rgba(0, 0, 0, 0.2);
+    }
+    100%{
+        box-shadow: 4px 3px 0px 0px rgb(204, 0, 255);
+    }
 }
 .box1-1{
     display: flex;
@@ -146,20 +160,21 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-row-gap: 9px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     padding: 0px 10px;
     position: fixed;
     right: 0;
     left: 60rem;
     bottom: 0;
     top: 9rem;
-    border-radius: 3px;
+    border-radius: 15px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
     z-index: 1;
 }
 .h3-conversation{
-    font-family: 'Prompt', sans-serif;
-    font-size: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 23px;
+    font-weight: 400;
     letter-spacing: 2px;
     color: rgb(0, 0, 0);
     text-align: center;
@@ -170,7 +185,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 .input-conversation{
     width: 20rem;
@@ -178,34 +193,30 @@
     margin: 0.5rem;
     border: none;
     border-radius: 10px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(131, 131, 131);
     outline: none;
+    background-color: rgb(228, 224, 224);
     padding-left: 0.9rem;
     font-size: 15px;
-    font-family: 'Prompt', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 500;
     letter-spacing: 2px;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 .link-conversation{
-    width: 40%;
-    height: 40px;
     border: none;
     outline: none;
     font-size: 20px;
-    font-family: 'Prompt', sans-serif;
-    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
     letter-spacing: 2px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: rgb(228, 224, 224);
     text-decoration: none;
-    text-align: center;
-    background-color: rgb(252, 116, 240);
-    border-radius: 5px;
     cursor: pointer;
-    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    margin: 0.5rem;
 }
 .link-conversationWpp{
     width: 50%;
@@ -230,10 +241,6 @@
     box-shadow: 3px 5px 0px 0px rgba(0,0,0,0.75);
     transition: cubic-bezier(0.645, 0.045, 0.355, 1) 0.3s;
 }
-.link-conversation:hover{
-    box-shadow: 3px 5px 0px 0px rgba(0,0,0,0.75);
-    transition: cubic-bezier(0.645, 0.045, 0.355, 1) 0.3s;
-}
 .textarea-conversation{
     width: 20rem;
     height: 100px;
@@ -241,13 +248,21 @@
     border-radius: 10px;
     padding: 0.5rem;
     border: none;
-    border-bottom: 1px solid black;
+    background-color: rgb(228, 224, 224);
+    border-bottom: 1px solid rgb(107, 107, 107);
     outline: none;
     font-size: 20px;
-    font-family: 'Prompt', sans-serif;
-    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
     letter-spacing: 2px;
-    color: white;
+    color: rgb(0, 0, 0);
+}
+#noEnvio{
+    color: rgb(0, 0, 0);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 1rem;
 }
 .button-conversation{
     width: 85%;
@@ -260,7 +275,6 @@
     font-weight: 500;
     letter-spacing: 2px;
     color: white;
-    background-color: rgb(252, 116, 240);
     border-radius: 5px;
     cursor: pointer;
 }
@@ -302,9 +316,17 @@
         transform: perspective(1000px) rotateX(0deg);
     }
 }
-    
 
-@media (min-width: 368px) and (max-width: 768px) {
+@keyframes aninAllMain {
+    0%{
+        opacity: 0;
+        }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 768px) {
     .h1-Home{
         font-size: 40px;
     }
@@ -391,7 +413,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        top: 26.5rem;
+        top: 26rem;
         left: 6.5rem;
         border-radius: 15px;
     }
@@ -409,21 +431,14 @@
         color: black;
     }
     .link-conversation{
-        width: 55%;
-        height: 30px;
         border: none;
         outline: none;
         font-size: 20px;
         font-family: 'Prompt', sans-serif;
         font-weight: 500;
         letter-spacing: 2px;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        color: rgb(228, 224, 224);
         text-decoration: none;
-        text-align: center;
-        background-color: rgb(252, 116, 240);
         border-radius: 5px;
         cursor: pointer;
         margin-left: 0rem;
@@ -484,4 +499,181 @@
     }
     
 
+}
+@media (min-width: 100px) and (max-width: 399px){
+    .h1-Home{
+        font-size: 40px;
+    }
+    .image-INITIAL{
+        width: 24rem;
+        margin-top: 0;
+    }
+    .div-Left{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .h3-MainHome{
+        font-size: 12px;
+        margin: 1.5rem;
+    }
+    .mainBoxes{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0;
+    }
+    .spanShow{
+        display: block;
+    }
+    .box1{
+        width: 10rem;
+        height: 3rem;
+        background-color: rgb(253, 253, 253);
+        border-radius: 10px;
+        margin: 0.7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .h3-mainBox{
+        font-family: 'Prompt', sans-serif;
+        font-size: 15px;
+        letter-spacing: 2px;
+        color: rgb(255, 255, 255);
+        margin: 10px;
+    }
+    .txt-mainBox{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 10px;
+        letter-spacing: 1px;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        margin: 2px;
+    }
+    .box1-1{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10px;
+        margin: 5px 5rem;
+    }
+    .div-Whatsapp{
+        position: relative;
+        left: 18rem;
+        bottom: 28rem;
+    }
+    .image-Whatsapp{
+        cursor: pointer;
+        position: fixed;
+    }
+    .image-Whatsapp:hover{
+        transform: scale(1.1);
+        transition: cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s;
+    }
+    .hs-mainHome{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .h2-bottomHome{
+        font-size: 40px;
+    }
+    .h3-bottomHome{
+        font-size: 15px;
+        margin: 0.5rem 0rem;
+        margin-right: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .div-conversation{
+        display: block;
+        top: 21rem;
+        left: 6rem;
+        border-radius: 15px;
+    }
+    .h3-conversation{
+        font-size: 15px;
+        margin: 1rem 0rem;
+        margin-right: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .form-conversation{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: black;
+    }
+    .link-conversation{
+        outline: none;
+        font-size: 20px;
+        font-family: 'Prompt', sans-serif;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: rgb(228, 224, 224);
+        text-decoration: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: 0rem;
+    }
+    #noEnvio{
+        margin: 0;
+    }
+    .input-conversation{
+        width: 15rem;
+        height: 40px;
+        margin: 0.5rem;
+        border: none;
+        border-radius: 10px;
+        border-bottom: 1px solid black;
+        outline: none;
+        padding-left: 0.5rem;
+        font-size: 20px;
+        font-family: 'Prompt', sans-serif;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: white;
+    }
+    .textarea-conversation{
+        width: 15rem;
+        height: 100px;
+        margin: 0.5rem;
+        border-radius: 10px;
+        padding-left: 0.5rem;
+        border: none;
+        border-bottom: 1px solid black;
+        outline: none;
+        font-size: 20px;
+        font-family: 'Prompt', sans-serif;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: white;
+    }
+    .link-conversationWpp{
+        width: 55%;
+        height: 30px;
+        border: none;
+        outline: none;
+        font-size: 20px;
+        font-family: 'Prompt', sans-serif;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        text-align: center;
+        background-color: rgb(0, 255, 64);
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: 0rem;
+    }
+    .button-conversation:hover{
+        box-shadow: 3px 5px 0px 0px rgba(0,0,0,0.75);
+        transition: cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s;
+    }
+    
 }

@@ -1,0 +1,92 @@
+.img-HeaderHomeCell{
+    width: 8rem;
+}
+.image-LogoPosHome{
+    width: 7rem;
+}
+.headerPosHome{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(31, 30, 30);
+    align-items: center;
+    margin-bottom: 0rem;
+}
+.div-NavPosMenu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    right: 5rem;
+    top: 15.4rem;
+}
+.menuPosHome{
+    display: grid;  
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 15px;
+    background-color: white;
+    padding: 30px 40px;
+    position: absolute;
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    z-index: 1;
+    animation: aninNavMenu 0.3s;
+}
+.posmenutxt-HeaderCell{
+    font-size: 16px;
+    color: rgb(248, 7, 156);
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.posmenuButton-Header{
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.posmenuButton-Header:hover{
+    color: rgb(248, 7, 156);
+}
+.posmenutxt-HeaderCell:hover{
+    color: black;
+}
+
+
+@media (min-width: 301px) and (max-width: 1199px) {
+
+.img-HeaderHome{
+    width: 5rem;
+}
+.menuPosHome{
+    display: grid;  
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-row-gap: 15px;
+    background-color: white;
+    padding: 30px 60px;
+    position: absolute;
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    z-index: 1;
+    animation: aninNavMenu 0.3s;
+}
+.posmenutxt-HeaderCell{
+    font-size: 20px;
+    color: rgb(248, 7, 156);
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+.div-NavPosMenu{
+    position: absolute;
+    right: 13.5rem;
+}
+}

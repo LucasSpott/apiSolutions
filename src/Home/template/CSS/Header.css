@@ -13,13 +13,56 @@
     margin: 0.5rem;
     display: block;
 }
+#switch{
+    appearance: none;
+    outline: none;
+    width: 4rem;
+    height: 2rem;
+    border-radius: 1rem;
+    background: #000000;
+    position: relative;
+    cursor: pointer;
+}
+#switch::after{
+    content: '';
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    top: 0.25rem;
+    left: 0.25rem;
+    transition: 0.5s;
+}
+.Day{
+    background-color: #e7e7e7;
+    color: #000000;
+}
+.txtDay{
+    color: #000000;
+    text-shadow: 2px 2px 1px rgb(224, 35, 241);
+}
+.BoxDay{
+    background-color: black;
+    color: #fff;
+}
+.txt-BoxDay{
+    color: #fff;
+}
+.txtFooterlDay{
+    color: #000000;
+}
 header{
     display: grid;
-    grid-template-columns: 0fr 1fr 2fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
     grid-template-areas: "logo menu menu";
     background-color: rgb(31, 30, 30);
     align-items: center;
     margin-bottom: 0rem;
+    animation: aninAllHeader 1s ease-in-out;
+}
+header #switch:checked::after{
+    left: calc(100% - 1.5rem - 0.25rem);
 }
 .h1-Header{
     margin-left: 2rem;
@@ -51,9 +94,17 @@ header{
 nav{
     grid-area: menu;
     display: grid;
-    grid-template-columns: repeat(4, 0);
+    grid-template-columns: repeat(5, 0);
     align-items: center;
     justify-content: space-around;
+}
+@keyframes aninAllHeader {
+    0%{
+        opacity: 0;
+        }
+    100%{
+        opacity: 1;
+    }
 }
 
 .button-Header:hover{
@@ -124,10 +175,10 @@ nav{
         display: none
     }
     .image-Logo{
-        width: 7rem;
+        width: 5.5rem;
     }
     .img-Header{
-        width: 3rem;
+        width: 2.5rem;
         display: flex;
     }
     .button-Header{
@@ -137,7 +188,6 @@ nav{
     }
     header{
         padding: 0.5rem;
-        z-index: 10;
         display: grid;
         grid-template-columns: 1fr 1fr 3fr 1fr;
         grid-template-areas: "logo menu menu";

@@ -3,16 +3,30 @@ import { Link } from "react-router-dom";
 import "./CSS/Footer.css";
 
 export default function Footer() {
+
+    const wpppEnter = () => {
+        window.open("https://api.whatsapp.com/send?phone=5511999999999&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20empresa%20XPTO%20%3A)");
+    }
+    const facebookEnter = () => {
+        window.open("https://www.facebook.com/");
+    }
+    const instagramEnter = () => {
+        window.open("https://www.instagram.com/");
+    }
+    const twitterEnter = () => {
+        window.open("https://twitter.com/");
+    }
+
     return (
         <footer>
         <div className="div-footer">
             <div className="footer-Contains">
                 <div className="boxes-footer">
                 <h1 className="h1-Footer">Contato</h1>
-                <Link className="linkFooter">Whatsapp</Link>
-                <Link className="linkFooter">Facebook</Link>
-                <Link className="linkFooter">Instagram</Link>
-                <Link className="linkFooter">Twitter</Link>
+                <Link onClick={()=> wpppEnter()} className="linkFooter">Whatsapp</Link>
+                <Link onClick={() => facebookEnter()} className="linkFooter">Facebook</Link>
+                <Link onClick={() => instagramEnter()} className="linkFooter">Instagram</Link>
+                <Link onClick={() => twitterEnter()} className="linkFooter">Twitter</Link>
             </div>
             </div>
             <div className="footer-Contains">

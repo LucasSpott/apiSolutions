@@ -12,7 +12,6 @@ export default function Main() {
     
     const [isWppOpen, setIsWppOpen] = useState(false);
     const [isSmallCel, setIsSmallCel] = useState(false);
-
     const[isLooby, setIsLooby] = useState(false);
 
     const enterWpp = () => {
@@ -37,7 +36,6 @@ export default function Main() {
         }
     };
 
-
     useEffect(() => {
         setTimeout(() => {
             setShow(show => "SOLUÇÕES");
@@ -49,10 +47,10 @@ export default function Main() {
         }
             if(show === "ESTRATÉGIAS"){
                 setTimeout(() => {
-                    setShow(show => "INVEÇÕES");
+                    setShow(show => "INVENÇÕES");
                 }, 2000)
             }
-                if(show === "INVEÇÕES"){
+                if(show === "INVENÇÕES"){
                     setTimeout(() => {
                         setShow(show => "INTEGRAÇÕES");
                     }
@@ -71,6 +69,32 @@ export default function Main() {
         }, 2000);
     }, []);
 
+    const former = async (e) => {
+        const form = e.target;
+        e.preventDefault();
+        const data = new FormData(form);
+        const response = await fetch('http://localhost/phphph/index.php', {
+            method: 'POST',
+            body: data
+        });
+        const json = await response.json();
+        setCont(json.form);
+    }
+
+    const buttonSubmit = () => {
+        const form = document.querySelector("form");
+        const nome = document.querySelector("#nome");
+        const email = document.querySelector("#email");
+        const telefone = document.querySelector("#telefone");
+        const mensagem = document.querySelector("#msg");
+        if(nome.value === "" || email.value === "" || telefone.value === "" || mensagem.value === ""){
+            document.querySelector("#noEnvio").innerHTML = "Preencha todos os campos";
+        }else if(form.checkValidity()){
+            alert("Mensagem enviada com sucesso");
+            form.submit();
+        }
+    }
+
     return (
         <main>
             <div className="div-Span">
@@ -88,7 +112,7 @@ export default function Main() {
         <div className="div-bottomHome">
         <div className="hs-mainHome">
             <h2 className="h2-bottomHome">E O PREÇO?</h2>
-            <h3 className="h3-bottomHome">Nós temos planos a baixo média do mercado.</h3>
+            <h3 className="h3-bottomHome">Nós temos planos a baixo da média do mercado.</h3>
         </div>
             <div className="mainBoxes">
                 <div className="box1">
@@ -119,18 +143,19 @@ export default function Main() {
                 classNames="wwppAnimation"
                 unmountOnExit>
         <div className="div-conversation">
-            <form className="form-conversation">
+            <form onSubmit={former} className="form-conversation">
                 <h3 className="h3-conversation">Mande uma mensagem para nós</h3>
-                <input className="input-conversation" type="text" placeholder="Nome" />
-                <input className="input-conversation" type="text" placeholder="Email" />
-                <input className="input-conversation" type="text" placeholder="Telefone" />
-                <textarea className="textarea-conversation" placeholder="Menssagem" />
-                <Link className="link-conversation" type="submit">Mandar</Link>
-            <Link to="#" className="link-conversation" onClick={enterWpp}>Exit</Link>
-                <Link onClick={() => imgWpp()} className="link-conversationWpp">Ou Whatsapp</Link>
+                <input id="nome" name="Nome" className="input-conversation" type="text" placeholder="Nome" />
+                <input id="email" name="Email" className="input-conversation" type="text" placeholder="Email" />
+                <input id="telefone" name="Telefone" className="input-conversation" type="text" placeholder="Telefone" />
+                <textarea id="msg" name="Mensagem" className="textarea-conversation" placeholder="Menssagem" />
+                <div className="buttonsConversation">
+                <button onClick={buttonSubmit} className="link-conversation" type="submit">Mandar</button>
+                <Link to="#" className="link-conversation" onClick={enterWpp}>Exit</Link>
+                </div> 
+                <Link onClick={() => imgWpp()} className="link-conversationWpp">Whatsapp</Link>
+                <p id="noEnvio" className="noEnvio"></p>
             </form>
-        
-        <span className="span-Looby">{isLooby}</span>
         </div>
         </CSSTransition>
         )}

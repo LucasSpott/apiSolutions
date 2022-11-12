@@ -1,22 +1,24 @@
 .formLogin{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: left;
     margin-top: 5rem;
-    align-self: center;
     flex-direction: column;
 }
 .fidelSet{
-    background-color: white;
-    width: 25rem;
-    height: 25rem;
-    border-radius: 1rem;
-    box-shadow: 0 0 1rem 0 rgba(0,0,0,0.2);
-    margin-bottom: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30rem;
+    height: 30rem;
+    border: none;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
 }
 .inputLogin{
-    width: 16rem;
-    height: 2rem;
+    width: 25rem;
+    height: 3rem;
     border: 1px solid rgb(105, 102, 102);
     border-radius: 4px;
     box-shadow: 2px 2px 2px rgb(3, 3, 3);
@@ -24,7 +26,7 @@
 .labelLogin{
     font-size: 1.5rem;
     font-weight: 600;
-    color: #242424;
+    color: #ffffff;
     margin: 10px;
 }
 .mainLogin{
@@ -35,8 +37,7 @@
     margin-top: 6rem;
 }
 .buttonLogin{
-    width: 16rem;
-    height: 2rem;
+    padding: 0.5rem 1rem;
     border: 1px solid rgb(105, 102, 102);
     border-radius: 4px;
     box-shadow: 2px 2px 2px rgb(3, 3, 3);
@@ -61,8 +62,8 @@
 .pLogin{
     font-size: 1rem;
     font-weight: 600;
-    color: #242424;
-    margin: 10px;
+    color: #ffffff;
+    margin: 12px;
     text-align: center;
 }
 .linkLogin{
@@ -85,4 +86,32 @@
     font-style: italic;
     font-weight: 600;
     margin-top: 1rem;
+}
+@media (min-width: 300px) and (max-width: 1199px){
+    .inputLogin{
+        width: 20rem;
+        height: 3rem;
+        border: 1px solid rgb(105, 102, 102);
+        border-radius: 4px;
+        box-shadow: 2px 2px 2px rgb(3, 3, 3);
+    }
+    .fidelSet{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 25rem;
+        height: 30rem;
+        border: none;
+        margin-bottom: 0rem;
+        margin-top: 0rem;
+    }
+    .pLogin{
+        font-size: 1rem;
+        font-weight: 600;
+        color: #fcfafa;
+        margin: 13px;
+        text-align: center;
+
+    }
 }

@@ -16,7 +16,7 @@ export default function Main() {
                 loginEmail,
                 loginPassword,
             ).then(() => {
-                window.location.href = '/'; //nadaainda
+                window.location.href = '/homelogin'; //nadaainda
             })
         } catch (error) {
             document.querySelector('.loginError').innerHTML = 'Email or Password is incorrect';
@@ -31,9 +31,8 @@ export default function Main() {
                     <input onChange={(event) => {setLoginEmail(event.target.value)}} className='inputLogin' type="email" id="email" name="email" />
                     <label className='labelLogin' htmlFor="password">Password</label>
                     <input onChange={(event) => {setLoginPassword(event.target.value)}} className='inputLogin' type="password" id="password" name="password" />
-                    <Link className='buttonLogin' type="submit" onClick={login}>Login</Link>
-
                 </form>
+                <Link className='buttonLogin' type="submit" onClick={login}>Login</Link>
                 <p className='pLogin'>Don't have an account? <Link className='linkLogin' to='/register'>Register</Link></p>
                 <span className='loginError'></span>
             </fieldset>

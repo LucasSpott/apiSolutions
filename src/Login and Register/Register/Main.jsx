@@ -17,7 +17,7 @@ export default function Main() {
                     registerEmail,
                     registerPassword,
                 ).then(() => {
-                    window.location.href = '/'; //nadaainda
+                    window.location.href = '/login'; //nadaainda
                 })
             } catch (error) {
                 document.querySelector('.registerError').innerHTML = 'Email or Password is incorrect';
@@ -28,13 +28,13 @@ export default function Main() {
         <main className="mainRegister">
             <fieldset className="fidelsetRegister">
                 <form className="formRegister">
-                    <label className="labelRegister" htmlFor="email">Name</label>
+                    <label className="labelRegister" htmlFor="email">Nome da empresa</label>
                     <input className="inputRegister" type="text" id="name" name="name" />
                     <label className="labelRegister" htmlFor="email">Email</label>
                     <input className="inputRegister" onChange={(event) => {setRegisterEmail(event.target.value)}} type="email" id="email" name="email" />
-                    <label className="labelRegister" htmlFor="password">Password</label>
+                    <label className="labelRegister" htmlFor="password">Senha</label>
                     <input className="inputRegister" onChange={(event) => {setRegisterPassword(event.target.value)}} type="password" id="password" name="password" />
-                    <label className="labelRegister" htmlFor="password">Confirm Password</label>
+                    <label className="labelRegister" htmlFor="password">Confirmar Senha</label>
                     <input onChange={(event) => {setRegisterConfirmPassword(event.target.value)}} className="inputRegister" type="password" id="password" name="password" />
                 </form>
                 <Link className="buttonRegister" type="submit" onClick={register}>Register</Link>

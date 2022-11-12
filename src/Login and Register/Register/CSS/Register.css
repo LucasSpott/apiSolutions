@@ -27,8 +27,8 @@
     margin: 10px;
 }
 .inputRegister{
-    width: 24rem;
-    height: 2rem;
+    width: 25rem;
+    height: 3rem;
     color: rgb(0, 0, 0);
     background-color: #ffffff;
     border: 1px solid rgb(0, 0, 0);
@@ -36,8 +36,7 @@
     box-shadow: 2px 2px 2px rgb(3, 3, 3);
 }
 .buttonRegister{
-    width: 16rem;
-    height: 2rem;
+    padding: 0.5rem 2rem;
     border: 1px solid rgb(105, 102, 102);
     border-radius: 4px;
     box-shadow: 2px 2px 2px rgb(3, 3, 3);
@@ -60,4 +59,9 @@
     font-style: italic;
     font-weight: 600;
     margin-top: 1rem;
+}
+@media (min-width: 300px) and (max-width: 1199px){
+    .inputRegister{
+        width: 20rem;
+    }
 }
