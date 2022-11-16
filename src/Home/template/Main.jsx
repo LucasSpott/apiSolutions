@@ -12,7 +12,6 @@ export default function Main() {
     
     const [isWppOpen, setIsWppOpen] = useState(false);
     const [isSmallCel, setIsSmallCel] = useState(false);
-    const[isLooby, setIsLooby] = useState(false);
 
     const enterWpp = () => {
         setIsWppOpen(!isWppOpen);
@@ -94,6 +93,9 @@ export default function Main() {
             form.submit();
         }
     }
+   
+
+    
 
     return (
         <main>
@@ -131,7 +133,7 @@ export default function Main() {
                 <h3 className="txt-mainBox">Atendimento 24horas</h3>
             </div>
             <div className="box1">
-                <h3 className="txt-mainBox">Expert em tecnologia empresariais</h3>
+                <h3 className="txt-mainBox">Expert em tecnologias empresariais</h3>
             </div>
             </div>
         </div>

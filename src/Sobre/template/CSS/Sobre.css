@@ -1,0 +1,90 @@
+.video-Sobre{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+}
+.div-SobreBox{
+    margin: 3rem;
+}
+.div-SobreBoxes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.main-Sobre{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+}
+.h1-SobreBox{
+    font-size: 1.5rem;
+    font-weight: 600;
+    animation: aninH1SobreBox 4s infinite;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.h2-Sobre{
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0rem 10rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.h1-Sobre{
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+.p-SobreBox{
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 1rem 0rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.img-SobreBox{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+li{
+    margin: 0.5rem 2rem;
+}
+@keyframes aninH1SobreBox {
+    0%{
+        opacity: 0;
+        transform: perspective(1000px) rotateX(90deg);
+    }
+    50%{
+        opacity: 0.5;
+        transform: perspective(1000px) rotateX(0deg);
+        color:  rgb(212, 0, 255);
+    }
+    100%{
+        opacity: 1;
+        transform: perspective(1000px) rotateX(0deg);
+    }
+}
+@media (min-width: 300px) and (max-width: 1199px){
+    .div-SobreBoxes{
+        flex-direction: column;
+    }
+    .div-SobreBox{
+        margin: 1rem;
+    }
+    .h2-Sobre{
+        padding: 0rem 0rem;
+        font-size: 17px;
+        text-align: left;
+    }
+    .h1-Sobre{
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+}

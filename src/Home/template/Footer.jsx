@@ -32,16 +32,16 @@ export default function Footer() {
             <div className="footer-Contains">
                 <div className="boxes-footer">
                 <h1 className="h1-Footer">Sobre</h1>
-                <Link className="linkFooter">Sobre nós</Link>
-                <Link className="linkFooter">Termos</Link>
-                <Link className="linkFooter">Privacidade</Link>
+                <Link to="/sobre" className="linkFooter">Sobre nós</Link>
+                <Link to="/termos" className="linkFooter">Termos</Link>
+                <Link to="/privacidade" className="linkFooter">Privacidade</Link>
                 <Link className="linkFooter">Ajuda</Link>
             </div>
             </div>
             <div className="footer-Contains">
                 <div className="boxes-footer">
                 <h1 className="h1-Footer">Compania</h1>
-                <Link className="linkFooter">Parceiros</Link>
+                <Link to="/parceiros" className="linkFooter">Experiência</Link>
                 <Link className="linkFooter">Desenvolvimentos</Link>
                 <Link className="linkFooter">Soluções</Link>
                 <Link className="linkFooter">Api Solutions</Link>

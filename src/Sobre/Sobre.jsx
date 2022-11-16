@@ -1,15 +1,14 @@
 import React from "react";
 import Header from "../Home/template/Header";
-import Main from "./components/Main";
+import Main from "./template/Main";
 import Footer from "../Home/template/Footer";
 
-export default function Projeto(props) {
-
+export default function Sobre() {
     return (
-        <main className='mainProjeto'>
+        <div>
             <Header />
             <Main />
             <Footer />
-        </main>
-    );
+        </div>
+    )
 }

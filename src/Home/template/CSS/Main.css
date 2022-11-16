@@ -24,7 +24,7 @@ main{
 }
 
 .image-INITIAL{
-    width: 120%;
+    width: 35rem;
     margin: 2rem;
     border-radius: 10px;
 }
@@ -64,6 +64,49 @@ main{
     grid-gap: 5px;
     margin-left: 11.5rem;
     grid-template-rows: 1fr 1fr;
+}
+.cookies{
+    background-color: #242424;
+    border-radius: 10px;
+    padding: 2rem 10rem;
+    top: 32rem;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    position: fixed;
+}
+.cookiesP{
+    font-family: 'Prompt', sans-serif;
+    font-size: 19px;
+    color: #fff;
+    font-weight: 300;
+    text-align: left;
+}
+.cookiesButton{
+    background-color: rgb(204, 0, 255);
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    top: 32rem;
+    margin-left: 2rem;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid #fff;
+    color: #fff;
+    font-family: 'Prompt', sans-serif;
+    font-size: 19px;
+    font-weight: 300;
+    text-align: left;
+}
+.cookiesButton:hover{
+    background-color: #e3e3e3;
+    border: 1px solid rgb(204, 0, 255);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+.cookiesLink{
+    font-family: 'Prompt', sans-serif;
+    font-size: 19px;
+    color: #fff;
+    font-weight: 300;
+    text-align: left;
+    text-decoration: none;
 }
 .box1{
     width: 22rem;
@@ -106,17 +149,17 @@ main{
 }
 .wwppAnimation-enter{
     opacity: 0;
-    transform: translateY(-100px);
+    transform: translate(400px);
 }
 .wwppAnimation-enter-active{
     opacity: 1;
-    transform: translateY(0);
+    transform: translate(400px);
     transition: all 0.5s;
 }
 .wwppAnimation-exit{
     opacity: 1;
-    transform: translateY(0);
 }
+   
 .wwppAnimation-exit-active{
     opacity: 0;
     transform: translateY(-100px);
@@ -341,9 +384,10 @@ main{
         flex-direction: column;
     }
     .h3-MainHome{
-        font-size: 12px;
+        font-size: 16px;
         margin-top: 1rem;
         margin-right: 0;
+        padding: 0rem 0.5rem;
     }
     .mainBoxes{
         display: grid;
@@ -358,7 +402,7 @@ main{
         height: 3rem;
         background-color: rgb(253, 253, 253);
         border-radius: 10px;
-        margin: 0.5rem;
+        margin: 0.5rem 1rem; 
         display: flex;
         justify-content: center;
         align-items: center;
@@ -407,13 +451,17 @@ main{
     }
     .h2-bottomHome{
         font-size: 40px;
+
+    }
+    .h3-bottomHome{
+        padding: 0rem 2rem;
     }
     .div-conversation{
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        top: 26rem;
+        top: 23rem;
         left: 6.5rem;
         border-radius: 15px;
     }
@@ -505,7 +553,7 @@ main{
         font-size: 40px;
     }
     .image-INITIAL{
-        width: 24rem;
+        width: 22rem;
         margin-top: 0;
     }
     .div-Left{
@@ -515,7 +563,7 @@ main{
         flex-direction: column;
     }
     .h3-MainHome{
-        font-size: 12px;
+        font-size: 16px;
         margin: 1.5rem;
     }
     .mainBoxes{
@@ -527,7 +575,7 @@ main{
         display: block;
     }
     .box1{
-        width: 10rem;
+        width: 9.5rem;
         height: 3rem;
         background-color: rgb(253, 253, 253);
         border-radius: 10px;
@@ -536,6 +584,18 @@ main{
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        animation: aninBoxMain 8s cubic-bezier(0.95, 0.05, 0.795, 0.035) infinite;
+    }
+    @keyframes aninBoxMain {
+        0%{
+            box-shadow: 0px 3px 0px 0px rgb(204, 0, 255);
+        }
+        50%{
+            box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.2);
+        }
+        100%{
+            box-shadow: 0px 3px 0px 0px rgb(204, 0, 255);
+        }
     }
     .h3-mainBox{
         font-family: 'Prompt', sans-serif;
@@ -561,8 +621,8 @@ main{
     }
     .div-Whatsapp{
         position: relative;
-        left: 18rem;
-        bottom: 28rem;
+        left: 17.5rem;
+        bottom: 31rem;
     }
     .image-Whatsapp{
         cursor: pointer;
@@ -589,10 +649,22 @@ main{
     }
     .div-conversation{
         display: block;
-        top: 21rem;
+        top: 0rem;
         left: 6rem;
         border-radius: 15px;
+        animation: anindivConversation 1s;
     }
+    @keyframes anindivConversation{
+        0%{
+            opacity: 0;
+            transform: translate(400px);
+        }
+        100%{
+            opacity: 1;
+            transform: translate(00px);
+        }
+    }
+    
     .h3-conversation{
         font-size: 15px;
         margin: 1rem 0rem;
@@ -605,6 +677,7 @@ main{
         align-items: center;
         flex-direction: column;
         color: black;
+        margin-top: 10rem;
     }
     .link-conversation{
         outline: none;

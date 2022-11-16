@@ -1,17 +1,56 @@
 .txt-Header{
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
-    color: #fff;
     text-align: center;
     text-decoration: none;
-}
-.txt-Header:active{
-    color: #fff;
+    color: white;
 }
 .image-Logo{
     width: 7rem;
     margin: 0.5rem;
     display: block;
+}
+.h1-ParceriaTheme{
+    font-size: 2.5rem;
+    color: black;
+    text-shadow: 1px 2px 1px #929090;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 1px;
+    margin: 1rem;
+}
+.h33-ContatoTheme{
+    color: black;
+    text-shadow: 1px 1px 1px rgb(107, 105, 105);
+}
+.txt-linkfooter{
+    color: #000000;
+}
+.headereFooter-Theme{
+    background-color: rgb(218, 216, 216);
+}
+.menubuttonTheme{
+    display: none;
+}
+.buttonHomeTheme{
+    text-shadow: 3px 1px 1px #000000;
+    color: rgb(119, 0, 255);
+}
+.txtTheme-light{
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+.box1Theme{
+    background-color: black;
+
+}
+.txtBoxTheme{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    text-decoration: none;
 }
 #switch{
     appearance: none;
@@ -34,22 +73,8 @@
     left: 0.25rem;
     transition: 0.5s;
 }
-.Day{
+.theme-light{
     background-color: #e7e7e7;
-    color: #000000;
-}
-.txtDay{
-    color: #000000;
-    text-shadow: 2px 2px 1px rgb(224, 35, 241);
-}
-.BoxDay{
-    background-color: black;
-    color: #fff;
-}
-.txt-BoxDay{
-    color: #fff;
-}
-.txtFooterlDay{
     color: #000000;
 }
 header{
@@ -60,6 +85,7 @@ header{
     align-items: center;
     margin-bottom: 0rem;
     animation: aninAllHeader 1s ease-in-out;
+    color: white;
 }
 header #switch:checked::after{
     left: calc(100% - 1.5rem - 0.25rem);
@@ -76,13 +102,15 @@ header #switch:checked::after{
     transition: cubic-bezier(0.39, 0.575, 0.565, 1) 0.2s;
 }
 .button-Header{
-    background-color: rgb(177, 18, 209);
+    background-color: rgb(8, 253, 0);
     border: none;
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    font-weight: 600;
+    padding: 1rem;
     font-size: 16px;
     margin: 0px 2px;
     cursor: pointer;
@@ -170,7 +198,7 @@ nav{
     .h1-Header{
         font-size: 20px;
     }
-    .txt-Header{
+    .txt-Header, .txtTheme-light{
         font-size: 10px;
         display: none
     }
@@ -198,7 +226,7 @@ nav{
         position: absolute;
     }
     nav{
-        grid-template-columns: repeat(4, 0);
+        grid-template-columns: repeat(1, 0);
         grid-template-rows: none;
         grid-row-gap: 20px;
     }
@@ -213,32 +241,54 @@ nav{
     }
     .menu{
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 19fr;
         grid-row-gap: 23px;
-        background-color: white;
-        padding:30px 40px;
+        background-color: rgb(31, 30, 30);
+        padding: 140px 40px;
         position: absolute;
         border-radius: 3px;
         box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
         z-index: 1;
-        animation: aninNavMenu 0.3s;
+        animation: aninNavMenu 1s ease-in-out;
+    }
+    .menuTheme{
+        display: grid;
+        grid-template-columns: 1fr;;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 19fr;
+        grid-row-gap: 23px;
+        background-color: #e7e7e7;
+        padding: 140px 40px;
+        position: absolute;
+        border-radius: 3px;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+        z-index: 1;
+        animation: aninNavMenu 1s ease-in-out;
+    }
+    .menubuttonTheme{
+        border: none;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        font-size: 20px;
+        cursor: pointer;
+        font-weight: bold;
+        display: flex;
     }
     @keyframes aninNavMenu{
         0%{
             opacity: 0;
-            transform: translateY(-100px);
+            transform: translate(400px);
         }
         100%{
             opacity: 1;
-            transform: translateY(0);
+            transform: translate(00px);
         }
     }
-        
     
     .div-NavMenu{
         position: absolute;
-        right: 15rem;
+        right: 12rem;
+        top: 0rem;
     }
     .div-NavButtons{
         display: grid;
@@ -246,7 +296,7 @@ nav{
     }
     .menuButton-Header{
         border: none;
-        color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
         text-decoration: none;
         font-size: 20px;
         cursor: pointer;

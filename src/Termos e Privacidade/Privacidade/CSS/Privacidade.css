@@ -1,0 +1,16 @@
+.div-Privacidade{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.p-Privacidade{
+    margin: 1.5rem 0.5rem;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+.h1-Privacidade{
+    margin: 1.5rem 0.5rem;
+    letter-spacing: 1px;
+    font-size: 30px;
+}

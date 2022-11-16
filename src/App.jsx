@@ -1,22 +1,24 @@
-import { useState } from 'react'
+import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './Home/Home'
-import Login from './Login and Register/Login'
-import Register from './Login and Register/Register'
 import Projeto from './Projeto/Projeto'
-import HomeLogin from './Login and Register/PosLogin/HomeLogin'
-
+import Parceiros from "./Parceiros/Parceiros";
+import Contato from './Contato/Contato'
+import Sobre from './Sobre/Sobre'
+import Termos from './Termos e Privacidade/Termos';
+import Privacidade from './Termos e Privacidade/Privacidade';
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
       <Route path="/projeto" element={<Projeto />} />
-      <Route path="/homelogin" element={<HomeLogin />} />
+      <Route path="/parceiros" element={<Parceiros />} />
+      <Route path="/contato" element={<Contato />} />
+      <Route path="/sobre" element={<Sobre />} />
+      <Route path="/termos" element={<Termos />} />
+      <Route path="/privacidade" element={<Privacidade />} />
     </Routes>
     </BrowserRouter>
   )
